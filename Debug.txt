@@ -23,11 +23,12 @@ Ran SetTester.java from handout files
 testRemove fails with ArrayIndexOutOfBoundsException
 Set breakpoint in SetTester at line 265 because the Stack trace printed out told me the test A_addB_AB_testRemoveA is failing
 Stepped through adding Elements to ArraySet - no problems there
-Stepped into testRemove on line 604 of Set Tester, then stepped into line 70 on ArraySet which is the method for removing a number in the ArraySet
-In the remove method the Array gets shifted up one space, which means the rear has to go down one
+Stepped into testRemove on line 604 of Set Tester, then stepped into line 70 on ArraySet which is the method for removing 
+a number in the ArraySet.
+In the remove method the Array gets shifted up one space, which means the rear has to go down one.
 The rear is keeping track of how much space in the Array, with each element moving up one then the rear
 that tracks the end of the Array has to go down one.
-Added to the while loop on line 78 while(i < rear - 1) because the Array is being moved up one place.
+Added to the while loop on line 78 of ArraySet while(i < rear - 1) because the Array is being moved up one place.
 Rerun tester - testRemove passes
 
 
