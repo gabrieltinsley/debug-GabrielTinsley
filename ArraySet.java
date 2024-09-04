@@ -75,7 +75,7 @@ public class ArraySet<T> implements SimpleSet<T> {
 				retVal = setArray[i];
 				//shift all following elements one space forward
 				//so there are no gaps in the array
-				while (i < rear) {
+				while (i < rear - 1) { // bug 3 fix
 					setArray[i] = setArray[i+1];
 					i++;
 				}
