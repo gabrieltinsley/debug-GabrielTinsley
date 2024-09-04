@@ -37,7 +37,11 @@ public class ArraySet<T> implements SimpleSet<T> {
 
 	@Override
 	public boolean isEmpty() {
-		return (rear > 0);
+		if(rear == 0) {
+			return true; // Bug 1 fix
+		} else {
+			return false;
+		}
 	}
 
 	@Override
@@ -57,6 +61,7 @@ public class ArraySet<T> implements SimpleSet<T> {
 				expandCapacity();
 			}
 			setArray[rear] = element;
+			rear++; // Bug 2 fix
 		}
 	}
 

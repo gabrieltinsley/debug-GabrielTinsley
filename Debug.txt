@@ -1,1 +1,30 @@
-Document debug
+Bug 1:
+Ran SetTester.java from handout files
+emptySet_testIsEmpty fails
+Set breakpoint in SetTester at line 111 where emptySet_testIsEmpty is run
+Stepped through ArraySet constructor - no problems there
+Stepped into testIsEmpty and into ArraySet isEmpty()
+Found return on line 40 has rear > 0 which would not be true for an Empty ArraySet
+Created an if-else statement where if rear == 0 return true else return false
+Rerun tester - emptySet_testIsEmpty now passes 
+
+Bug 2:
+Ran SetTester.java from handout files
+emptySet_addA_A_testIsEmpty fails
+Set breakpoint in SetTester at line 147 where emptySet_addA_A_testIsEmpty is run
+Stepped through ArraySet constructor - no problems there
+Stepped into line 137 of SetTester to get to add Element T method
+Found setArray is containing the value of integer A but rear did not equal integer A
+On line 64 I added rear++ to set the rear equal to the number of elements in the ArraySet
+Rerun tester - emptySet_addA_A_testIsEmpty now passes
+
+Bug 3:
+Ran SetTester.java from handout files
+testRemove fails with ArrayIndexOutOfBoundsException
+Set breakpoint in SetTester at line 265 because the Stack trace printed out told me the test A_addB_AB_testRemoveA is failing
+
+
+
+
+
+
